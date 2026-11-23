@@ -43,8 +43,9 @@
   .hero {
     padding: 120px 0 110px;
     background:
-      radial-gradient(900px 400px at 80% -10%, rgba(74, 222, 128, .18), transparent 60%),
-      radial-gradient(700px 400px at 0% 100%, rgba(22, 163, 74, .2), transparent 60%);
+      linear-gradient(90deg, rgba(11,26,20,.85) 0%, rgba(11,26,20,.35) 60%, rgba(11,26,20,0) 100%),
+      url("background.svg") center / cover no-repeat,
+      var(--bg);
   }
   .eyebrow { color: var(--accent); font-weight: 600; letter-spacing: .12em; text-transform: uppercase; font-size: .8rem; }
   h1 { font-size: clamp(2.4rem, 6vw, 4.2rem); line-height: 1.1; margin: 16px 0 20px; max-width: 14ch; }
