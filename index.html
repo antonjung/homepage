@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jungle Major Ltd</title>
+<meta name="description" content="Jungle Major Ltd — freelance software development and iOS & Android app development.">
+<style>
+  :root {
+    --bg: #0b1a14;
+    --bg-alt: #10251c;
+    --fg: #e8f1ec;
+    --muted: #9db5a8;
+    --accent: #4ade80;
+    --accent-dark: #16a34a;
+    --card: #14301f;
+    --radius: 14px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    line-height: 1.6;
+  }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+
+  header {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(11, 26, 20, .85);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #1d3a2b;
+  }
+  nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .logo { font-weight: 800; letter-spacing: .04em; font-size: 1.15rem; }
+  .logo span { color: var(--accent); }
+  nav ul { list-style: none; display: flex; gap: 28px; }
+  nav ul a { color: var(--muted); font-size: .95rem; transition: color .2s; }
+  nav ul a:hover { color: var(--accent); }
+
+  .hero {
+    padding: 120px 0 110px;
+    background:
+      radial-gradient(900px 400px at 80% -10%, rgba(74, 222, 128, .18), transparent 60%),
+      radial-gradient(700px 400px at 0% 100%, rgba(22, 163, 74, .2), transparent 60%);
+  }
+  .eyebrow { color: var(--accent); font-weight: 600; letter-spacing: .12em; text-transform: uppercase; font-size: .8rem; }
+  h1 { font-size: clamp(2.4rem, 6vw, 4.2rem); line-height: 1.1; margin: 16px 0 20px; max-width: 14ch; }
+  h1 em { font-style: normal; color: var(--accent); }
+  .lead { color: var(--muted); font-size: 1.15rem; max-width: 52ch; margin-bottom: 36px; }
+  .btn {
+    display: inline-block; padding: 13px 26px; border-radius: 999px; font-weight: 600;
+    background: var(--accent); color: #052e16; transition: transform .15s, background .2s;
+  }
+  .btn:hover { background: #86efac; transform: translateY(-2px); }
+  .btn.ghost { background: transparent; color: var(--fg); border: 1px solid #2c5640; margin-left: 12px; }
+  .btn.ghost:hover { border-color: var(--accent); background: transparent; }
+
+  section { padding: 90px 0; }
+  section.alt { background: var(--bg-alt); }
+  h2 { font-size: 2rem; margin-bottom: 12px; }
+  .sub { color: var(--muted); max-width: 60ch; margin-bottom: 44px; }
+
+  .grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+  .card {
+    background: var(--card); border: 1px solid #1f4630; border-radius: var(--radius);
+    padding: 28px; transition: transform .2s, border-color .2s;
+  }
+  .card:hover { transform: translateY(-4px); border-color: var(--accent-dark); }
+  .card .icon { font-size: 1.8rem; margin-bottom: 14px; }
+  .card h3 { margin-bottom: 8px; font-size: 1.15rem; }
+  .card p { color: var(--muted); font-size: .96rem; }
+
+  .about { display: grid; gap: 40px; grid-template-columns: 1.3fr 1fr; align-items: center; }
+  .facts { list-style: none; display: grid; gap: 14px; }
+  .facts li { background: var(--card); border-left: 3px solid var(--accent); padding: 14px 18px; border-radius: 8px; }
+  .facts b { display: block; font-size: .8rem; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
+  @media (max-width: 760px) { .about { grid-template-columns: 1fr; } nav ul { gap: 16px; } }
+
+  .contact { text-align: center; }
+  .contact .sub { margin-inline: auto; }
+  .contact a.mail { font-size: 1.4rem; color: var(--accent); font-weight: 600; border-bottom: 2px solid transparent; }
+  .contact a.mail:hover { border-color: var(--accent); }
+
+  footer { border-top: 1px solid #1d3a2b; padding: 28px 0; color: var(--muted); font-size: .88rem; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a href="#" class="logo">JUNGLE<span>MAJOR</span></a>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#clients">Clients</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Jungle Major Ltd</p>
+      <h1>Software built to <em>last</em>.</h1>
+      <p class="lead">Freelance software developer building web, back-end and mobile solutions — including apps for the Apple App Store and Google Play.</p>
+      <a href="#contact" class="btn">Get in touch</a>
+      <a href="#services" class="btn ghost">What we do</a>
+    </div>
+  </section>
+
+  <section id="services" class="alt">
+    <div class="wrap">
+      <h2>What we do</h2>
+      <p class="sub">Practical software development, from first idea to store release.</p>
+      <div class="grid">
+        <div class="card">
+          <div class="icon">📱</div>
+          <h3>iOS &amp; Android Apps</h3>
+          <p>Mobile apps designed, built and published to the Apple App Store and Google Play.</p>
+        </div>
+        <div class="card">
+          <div class="icon">💻</div>
+          <h3>Custom Software</h3>
+          <p>Bespoke web and business software, tailored to the way your company actually works.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🤝</div>
+          <h3>Freelance Development</h3>
+          <p>Experienced developer available to join your team or deliver a project end to end.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about">
+      <div>
+        <h2>About us</h2>
+        <p class="sub" style="margin-bottom:0">Jungle Major Ltd is a UK freelance software development company. We work in partnership with Digisolve Ltd and deliver dependable software and mobile apps for businesses, with plain-language communication and honest estimates.</p>
+      </div>
+      <ul class="facts">
+        <li><b>Company</b>Jungle Major Ltd</li>
+        <li><b>Based in</b>United Kingdom</li>
+        <li><b>Partner</b>Digisolve Ltd</li>
+        <li><b>Approach</b>Clear, practical, dependable</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="clients">
+    <div class="wrap">
+      <h2>Trusted by</h2>
+      <p class="sub">Companies we've built software for, and our delivery partner.</p>
+      <div class="grid">
+        <div class="card"><h3>Weltech International</h3><p>Client</p></div>
+        <div class="card"><h3>Rotech Keg Ltd</h3><p>Client</p></div>
+        <div class="card"><h3>Digisolve Ltd</h3><p>Working partner</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="alt contact">
+    <div class="wrap">
+      <h2>Let's talk</h2>
+      <p class="sub">Have a project or a question? We'd love to hear from you.</p>
+      <a class="mail" href="mailto:hello@junglemajor.co.uk">hello@junglemajor.co.uk</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; <span id="year">2026</span> Jungle Major Ltd. All rights reserved.</span>
+    <span>Registered in England &amp; Wales</span>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
